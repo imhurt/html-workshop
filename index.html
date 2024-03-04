@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">    <!-- Tähestik, mida kasutame  -->
     <link rel="stylesheet" type="text/css" href="style.css"/> <!-- Ühendus CSS-i ja meie lehe vahel -->
-    <title>Minu veebileht</title> <!-- Veebilehe pealkiri, mida näidatakse brauseri tab-is -->
+    <title>Turbo the Snail</title> <!-- Veebilehe pealkiri, mida näidatakse brauseri tab-is -->
+
+<style>
+
+
+</style>
 </head>
 
 <body>
@@ -12,19 +17,19 @@
 
 <div class="container" style="padding: 1em">
     <div id="textBox">
-        <h1>Nimetus</h1>
+        <h1>Turbo</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Curabitur eget lectus mi. Donec lorem magna,
             elementum ac dui in, posuere pharetra odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Curabitur eget lectus mi. Donec lorem magna, elementum ac dui in, posuere pharetra odio.</p>
     </div>
-    <img id="photo" src="images/img.png">
+    <img id="photo" src="images/turbo1.jpg">
 </div>
 
 <!-- Lõbusad faktid -->
 
 <div class="container">
     <div class="card">
-        <!-- Tee see osa ise! -->
+        <img style="object-fit: cover;" src="images/turbo_ev1.jpg">
     </div>
     <div class="card">
         <!-- Tee see osa ise! -->
@@ -37,7 +42,7 @@
 <!-- Video -->
 
 <div class="container" style="flex-flow: column">
-    <iframe id="video" src="https://www.youtube.com/embed/WLT7TDGzXGU?si=z5_UTSHfVFkCDm6X" title="YouTube video player"
+    <iframe id="video" src="https://www.youtube.com/embed/4p1c5lnJRB4?si=CPmbB8wVGHh58rVp" title="EVOLUTION OF TURBO"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
     <!-- max-width paneb ette piiri, et kui pikk võib tekst olla -->
@@ -54,7 +59,20 @@
         <!-- Tee see osa ise! -->
     </div>
 </div>
-
+<button id="nupp">Vajuta mind</button>
 </body>
-    
+<script>
+    let button = document.getElementById("nupp");
+
+    button.addEventListener("click", function() {
+        let body = document.body;
+        if (body.style.background.toLocaleLowerCase() === "green") {
+            body.style.background = "pink";
+        } else {
+            body.style.background = "green";
+            body.p.style.color = "blue";
+        }
+    });
+
+</script>
 </html>
